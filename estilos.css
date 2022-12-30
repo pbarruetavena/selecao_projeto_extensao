@@ -1,4 +1,43 @@
+    /* fontes */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap'); /* header */
+
+
+:root {
+    --cor-fundo: #0d1117;
+    --cor-texto: #a2a2a5;
+}
+
 * {
     margin: 0px;
     padding: 0px;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+
+header {
+    min-height: 75px;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+.container-link {
+    cursor: pointer;
+}
+.container-link p {
+    font-family: 'Mulish', sans-serif;
+    background: linear-gradient(93deg, rgba(162,162,165,1) 0%, rgba(178,178,207,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+    /* definindo posições */
+
+.slide-selecionado {
 }
