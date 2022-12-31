@@ -23,11 +23,18 @@ header {
     height: 20vh;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
     align-items: center;
     gap: 10px;
+    position: relative;
 }
 .container-link {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease-in-out;
+}
+.container-link:not(.link-slide-selecionado) {
     cursor: pointer;
 }
 .container-link p {
@@ -39,5 +46,30 @@ header {
 
     /* definindo posições */
 
-.slide-selecionado {
+.link-slide-selecionado {
+    width: 40vw;
+    margin: 0px 30vw;
+    font-size: 40px;
+}
+
+                /* links à esquerda */
+#link-espectativa.link-slide-esquerdo {
+    left: 15vw;
+}
+#link-porque.link-slide-esquerdo {
+    left: 7vw;
+}
+#link-sobre.link-slide-esquerdo {
+    left: 1vw;
+}
+
+                /* links à direita */
+#link-porque.link-slide-direito {
+    right: 22vw;
+}
+#link-espectativa.link-slide-direito {
+    right: 11vw;
+}
+#link-projetos.link-slide-direito {
+    right: 3vw;
 }
