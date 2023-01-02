@@ -5,20 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículo | Projeto de extensão</title>
     <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header> <!-- Navegar nos slides -->
 
-        <div id="link-sobre" class="container-link" data-txt="Sobre" data-exp="Sobre mim"                                   > <p>Sobre</p> </div>
-        <div id="link-porque" class="container-link" data-txt="Por que?" data-exp="Por que me inscrevi?"                    > <p>Por que?</p> </div>
-        <div id="link-espectativa" class="container-link" data-txt="Expectativas" data-exp="Expectativas"                   > <p>Expectativas</p> </div>
-        <div id="link-projetos" class="container-link" data-txt="Projetos" data-exp="Outros projetos"                       > <p>Projetos</p> </div>
+        <div id="link-sobre" class="container-link link-slide-selecionado" data-txt="Sobre" data-exp="Sobre mim" > <p>Sobre</p> </div>
+        <div id="link-porque" class="container-link link-slide-direito" data-txt="Por que?" data-exp="Por que me inscrevi?" > <p>Por que?</p> </div>
+        <div id="link-espectativa" class="container-link link-slide-direito" data-txt="Expectativas" data-exp="Expectativas" > <p>Expectativas</p> </div>
+        <div id="link-projetos" class="container-link link-slide-direito" data-txt="Projetos" data-exp="Outros projetos" > <p>Projetos</p> </div>
 
     </header>
     
     <main> <!-- Slider -->
         
-        <section id="sobre" class="slide">
+        <section id="sobre" class="slide selecionado">
             <div id="container-nome">
                 <h2>Pedro Gabriel Barruetavena Vieira</h2>
             </div>
@@ -27,16 +28,23 @@
             </div>
         </section>
         
-        <section id="porque" class="slide"></section>
+        <section id="porque" class="slide direito">
+            <p>Por que me inscrevi?</p>
+        </section>
     
-        <section id="expectativas" class="slide"></section>
+        <section id="expectativas" class="slide direito">
+            <p>Não sei o que escrever</p>
+        </section>
 
-        <section id="projetos" class="slide"></section>
+        <section id="projetos" class="slide direito">
+            <p>Vo coloca meu github aqui e alguns projetos com a mesma formatação do github</p>
+        </section>
 
     </main>
 
     <footer> <!-- Contatos e adicionais -->
-
+        <p>Social</p>
+        <button><i class="fa fa-github" aria-hidden="true"></i></button>
     </footer>
     
     <script src="script.js"></script>

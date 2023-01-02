@@ -15,14 +15,28 @@
 body {
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow-x: hidden;
 }
 
+footer {
+    position: absolute;
+    bottom: 3vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 header {
     min-height: 75px;
     height: 20vh;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
     gap: 10px;
     position: relative;
@@ -32,7 +46,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 300ms ease-in-out;
+    transition: all 400ms ease-in-out;
 }
 .container-link:not(.link-slide-selecionado) {
     cursor: pointer;
@@ -44,14 +58,13 @@ header {
     -webkit-text-fill-color: transparent;
 }
 
-    /* definindo posições */
+    /* definindo posições dos links */
 
 .link-slide-selecionado {
     width: 40vw;
     margin: 0px 30vw;
     font-size: 40px;
 }
-
                 /* links à esquerda */
 #link-espectativa.link-slide-esquerdo {
     left: 15vw;
@@ -62,7 +75,6 @@ header {
 #link-sobre.link-slide-esquerdo {
     left: 1vw;
 }
-
                 /* links à direita */
 #link-porque.link-slide-direito {
     right: 22vw;
@@ -73,3 +85,26 @@ header {
 #link-projetos.link-slide-direito {
     right: 3vw;
 }
+
+
+main {
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    width: 70vw;
+    height: 60vh;
+    margin: auto 15vw;
+    transition: all 300ms ease-in-out;
+}
+.slide.selecionado {
+    
+}
+.slide.esquerdo {
+    transform: translateX(-100vw);
+}
+.slide.direito {
+    transform: translateX(100vw);
+}
+
