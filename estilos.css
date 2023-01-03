@@ -48,8 +48,9 @@ header {
     align-items: center;
     transition: all 400ms ease-in-out;
 }
-.container-link:not(.link-slide-selecionado) {
+.container-link:not(.link-slide-selecionado):hover {
     cursor: pointer;
+    transform: scale(1.2);
 }
 .container-link p {
     font-family: 'Mulish', sans-serif;
@@ -98,9 +99,6 @@ main {
     margin: auto 15vw;
     transition: all 300ms ease-in-out;
 }
-.slide.selecionado {
-    
-}
 .slide.esquerdo {
     transform: translateX(-100vw);
 }
@@ -108,3 +106,49 @@ main {
     transform: translateX(100vw);
 }
 
+
+/*  Projetos e mais */
+#projetos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+#icone-gh {
+    font-size: 30vw;
+}
+#icone-gh:hover {
+    cursor: pointer;
+}
+#lista-projetos {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+#lista-projetos li {
+    margin: 5px 10px;
+    font-size: 40px;
+}
+#lista-projetos li a {
+    color: inherit;
+    text-decoration: none;
+    font-family: 'Mulish', sans-serif;
+}
+#lista-projetos li.gh-atv a:link, 
+#lista-projetos li.gh-atv a:visited {
+    color: #3691f9;
+}
+#lista-projetos li a:hover,
+#lista-projetos li a:active {
+    text-decoration: underline;
+}
+
+#lista-projetos li i {
+    font-size: 50px;
+}
+#lista-projetos li:not(.gh-atv) i {
+    display: none;
+}

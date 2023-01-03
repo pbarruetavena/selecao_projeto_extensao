@@ -1,5 +1,5 @@
 let aux = 0;
-let indiceSlide = 0;
+let indiceSlide = 3;
 let linksArr = document.querySelectorAll('.container-link');
 let slidesArr = document.querySelectorAll('.slide');
 
@@ -97,4 +97,13 @@ document.addEventListener('keydown', (e)=> {
             aux = indiceSlide;
         }
     }
+});
+
+
+let iconeGHEl = document.querySelector('#icone-gh');
+let itensListaProjetosArr = document.querySelectorAll('#lista-projetos li');
+iconeGHEl.addEventListener('click', ()=> {
+    for(let item of itensListaProjetosArr)
+        item.classList.toggle('gh-atv');
+    iconeGHEl.classList.toggle('gh-atv');
 });
