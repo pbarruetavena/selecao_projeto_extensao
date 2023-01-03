@@ -29,6 +29,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 5px;
 }
 
 header {
@@ -151,4 +152,26 @@ main {
 }
 #lista-projetos li:not(.gh-atv) i {
     display: none;
+}
+
+/* footer */
+#botoes-social {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+#botoes-social button {
+    color: var(--cor-texto);
+    background-color: inherit;
+    border: 1px var(--cor-texto) solid;
+    font-size: 25px;
+    border-radius: 100%;
+    padding: 4px 6px;
+}
+#botoes-social button:hover {
+    color: var(--cor-fundo);
+    background-color: var(--cor-texto);
+    border-color: var(--cor-fundo);
+    cursor: pointer;
+    transform: translate(2px, 2px);
 }
