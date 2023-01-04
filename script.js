@@ -78,8 +78,6 @@ document.querySelector('#link-projetos').addEventListener('click', () => {
     giraSlide();
     aux = 3;
 });
-
-
 document.addEventListener('keydown', (e)=> {
     if(e.key == "ArrowLeft") {
         if(indiceSlide > 0) {
@@ -100,6 +98,8 @@ document.addEventListener('keydown', (e)=> {
 });
 
 
+
+    // outros projetos
 let iconeGHEl = document.querySelector('#icone-gh');
 let itensListaProjetosArr = document.querySelectorAll('#lista-projetos li');
 let linkProjetosArr = document.querySelectorAll('#projetos #lista-projetos a');
@@ -113,3 +113,9 @@ iconeGHEl.addEventListener('click', ()=> {
         link.dataset.link = txt;
     }
 });
+
+
+    // footer
+document.querySelector('#btn-github').addEventListener('click', () => open("https://github.com/pbarruetavena", "_blank"));
+document.querySelector('#btn-insta').addEventListener('click', () => open("https://www.instagram.com/pedrogabrielb.vieira/", "_blank"));
+document.querySelector('#btn-email').addEventListener('click', () => location.href = "mailto:pbarruetavenavieira@gmail.com");
