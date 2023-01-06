@@ -1,5 +1,6 @@
     /* fontes */
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap'); /* header */
+@import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap'); /* paragrafos */
 
 
 :root {
@@ -96,7 +97,7 @@ main {
 .slide {
     position: absolute;
     width: 70vw;
-    height: 60vh;
+    height: 55vh;
     margin: auto 15vw;
     transition: all 300ms ease-in-out;
 }
@@ -106,6 +107,46 @@ main {
 .slide.direito {
     transform: translateX(100vw);
 }
+
+/* sobre */
+#sobre {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#imagem-pessoal {
+    filter: grayscale(100%) contrast(0.8);
+    border-radius: 1000px;
+    order: 2;
+}
+#sobre #container-sobre {
+    margin: 0px 3vw;
+    text-align: justify;
+}
+#container-sobre p {
+    margin: 10px 0px;
+    text-indent: 20px;
+    font-family: 'Slabo 27px', serif;
+    font-size: 18px;
+}
+
+
+/*  porque   */
+#porque {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+#porque p{
+    margin: 10px 9vw;
+    text-indent: 20px;
+    font-family: 'Slabo 27px', serif;
+    font-size: 18px;
+}
+
+/* expectativas */
 
 
 /*  Projetos e mais */
@@ -138,10 +179,6 @@ main {
     text-decoration: none;
     font-family: 'Mulish', sans-serif;
 }
-#lista-projetos li.gh-atv a:link, 
-#lista-projetos li.gh-atv a:visited {
-    color: #3691f9;
-}
 #lista-projetos li a:hover,
 #lista-projetos li a:active {
     text-decoration: underline;
@@ -150,8 +187,9 @@ main {
 #lista-projetos li i {
     font-size: 50px;
 }
-#lista-projetos li:not(.gh-atv) i {
-    display: none;
+#lista-projetos li i:hover {
+    cursor: pointer;
+    color: #3691f9;
 }
 
 /* footer */
