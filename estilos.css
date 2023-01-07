@@ -1,6 +1,7 @@
     /* fontes */
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap'); /* header */
 @import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap'); /* paragrafos */
+@import url('https://fonts.googleapis.com/css2?family=Spectral&display=swap'); /* teste footer */
 
 
 :root {
@@ -30,7 +31,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 20px;
 }
 
 header {
@@ -67,6 +68,7 @@ header {
     width: 40vw;
     margin: 0px 30vw;
     font-size: 40px;
+    transform: translateY(25px);
 }
                 /* links à esquerda */
 #link-espectativa.link-slide-esquerdo {
@@ -132,21 +134,22 @@ main {
 }
 
 
-/*  porque   */
-#porque {
+/*  porque e expectativas  */
+#porque,
+#expectativas {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center
 }
-#porque p{
+#porque p, 
+#expectativas p {
     margin: 10px 9vw;
     text-indent: 20px;
     font-family: 'Slabo 27px', serif;
     font-size: 18px;
 }
 
-/* expectativas */
 
 
 /*  Projetos e mais */
@@ -158,7 +161,7 @@ main {
     gap: 15px;
 }
 #icone-gh {
-    font-size: 30vw;
+    font-size: 23em;
 }
 #icone-gh:hover {
     cursor: pointer;
@@ -193,6 +196,10 @@ main {
 }
 
 /* footer */
+footer p {
+    font-family: 'Mulish', sans-serif;
+    font-size: 20px;
+}
 #botoes-social {
     display: flex;
     flex-direction: row;
