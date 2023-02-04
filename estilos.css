@@ -117,7 +117,6 @@ main {
     align-items: center;
 }
 #imagem-pessoal {
-    filter: grayscale(100%) contrast(0.8);
     border-radius: 1000px;
     order: 2;
 }
@@ -195,7 +194,7 @@ main {
 }
 
 /* footer */
-footer p {
+#display-footer {
     font-family: 'Mulish', sans-serif;
     font-size: 20px;
 }
@@ -218,6 +217,9 @@ footer p {
     border-color: var(--cor-fundo);
     cursor: pointer;
     transform: translate(2px, 2px);
+}
+#btn-ajuda {
+    display: none;
 }
 
 
@@ -361,5 +363,43 @@ footer p {
     .link-slide-selecionado{
         width: 70%;
         margin: 0px 15%;
+    }
+    footer {
+        bottom: 8vh;
+    }
+}
+
+@media (min-width: 870px) {
+    #botoes-social #btn-ajuda {
+        display: block;
+        padding: 4px 11px 4px 9px;
+    }
+}
+
+/* botao de ajuda e efeito de digitação*/
+#botoes-social #btn-ajuda.ajuda-ativada {
+    color: var(--cor-fundo);
+    background-color: var(--cor-texto);
+    border-color: var(--cor-fundo);
+    cursor: pointer;
+}
+.typing {
+    width: 15.5em;
+    animation: digitando 2s steps(22), piscando .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+}
+
+@keyframes digitando {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes piscando {
+    50% {
+        border-color: transparent;
     }
 }

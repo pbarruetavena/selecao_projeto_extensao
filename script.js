@@ -98,12 +98,18 @@ document.addEventListener('keydown', (e)=> {
 });
 
 
-
-    // outros projetos
-
-
-
     // footer
 document.querySelector('#btn-github').addEventListener('click', () => open("https://github.com/pbarruetavena", "_blank"));
 document.querySelector('#btn-insta').addEventListener('click', () => open("https://www.instagram.com/pedrogabrielb.vieira/", "_blank"));
 document.querySelector('#btn-email').addEventListener('click', () => location.href = "mailto:pbarruetavenavieira@gmail.com");
+
+let indiceAjuda = 0;
+let txtAjuda = ["Pedro Gabriel Barruetavena Vieira", 'Novo por aqui? Tente usar <i class="fa fa-caret-square-o-left" aria-hidden="true"></i> ou <i class="fa fa-caret-square-o-right" aria-hidden="true"></i>'];
+
+document.querySelector('#btn-ajuda').addEventListener('click', () => {
+    indiceAjuda = (indiceAjuda + 1) % 2;
+    let pAjuda = document.querySelector('#display-footer');
+    pAjuda.classList.toggle('typing');
+    pAjuda.innerHTML = txtAjuda[indiceAjuda]
+    document.querySelector('#btn-ajuda').classList.toggle('ajuda-ativada');
+});
