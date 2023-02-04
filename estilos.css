@@ -31,7 +31,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 16px;
 }
 
 header {
@@ -117,6 +117,7 @@ main {
     align-items: center;
 }
 #imagem-pessoal {
+    filter: saturate(2.1);
     border-radius: 1000px;
     order: 2;
 }
@@ -161,9 +162,7 @@ main {
 #icone-gh {
     font-size: 23em;
 }
-#icone-gh:hover {
-    cursor: pointer;
-}
+
 #lista-projetos {
     list-style: none;
     display: flex;
@@ -188,7 +187,7 @@ main {
 #lista-projetos li i {
     font-size: 50px;
 }
-#lista-projetos li i:hover {
+#lista-projetos li a:hover {
     cursor: pointer;
     color: #3691f9;
 }
@@ -343,10 +342,11 @@ main {
         display: none;
     }
     #projetos #icone-gh {
-        font-size: 15em;
+        font-size: 12em;
     }
-    #projetos li {
-        font-size: 30px;
+    #projetos li,
+    #projetos li i {
+        font-size: 20px;
     }
     .container-link:not(.link-slide-selecionado) {
         font-size: 13px;
@@ -354,7 +354,7 @@ main {
     #sobre p,
     #porque p,
     #expectativas p {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .container-link:not(.link-slide-selecionado) {
@@ -365,7 +365,55 @@ main {
         margin: 0px 15%;
     }
     footer {
-        bottom: 8vh;
+        bottom: 12vh;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 385px) {
+    footer {
+        bottom: 10vh;
+        gap: 8px;
+    }
+    .container-link:not(.link-slide-selecionado) {
+        font-size: 11px;
+    }
+    #sobre p,
+    #porque p,
+    #expectativas p {
+        font-size: 12px;
+    }
+    #projetos li,
+    #projetos li i {
+        font-size: 18px;
+    }
+    #display-footer {
+        font-size: 16px;
+    }
+}
+
+.passa-slide {
+    display: none;
+}
+
+@media (max-width: 869px) {
+    #lista-projetos a {     /* consertar a sobreposição da região no link */
+        position: relative;
+        z-index: 10;
+    }
+
+    .passa-slide {
+        display: block;
+        position: absolute;
+        height: 70vh;
+        width: 25vw;
+        top: 20vh;
+    }
+    #reg-esquerdo {
+        left: 0px;
+    }
+    #reg-direito {
+        right: 0px;
     }
 }
 

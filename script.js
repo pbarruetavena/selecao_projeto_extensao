@@ -97,6 +97,24 @@ document.addEventListener('keydown', (e)=> {
     }
 });
 
+//regiões clicaveis para passar o slide
+document.querySelector("#reg-esquerdo").addEventListener('click', () => {
+    if(indiceSlide > 0) {
+        indiceSlide--;
+        giraHeader();
+        giraSlide();
+        aux = indiceSlide;
+    } 
+});
+document.querySelector("#reg-direito").addEventListener('click', () => {
+    if(indiceSlide < 3) {
+        indiceSlide++;
+        giraHeader();
+        giraSlide();
+        aux = indiceSlide;
+    }
+});
+
 
     // footer
 document.querySelector('#btn-github').addEventListener('click', () => open("https://github.com/pbarruetavena", "_blank"));
